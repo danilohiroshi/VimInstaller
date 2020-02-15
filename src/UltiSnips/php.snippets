@@ -1,0 +1,63 @@
+snippet met
+${1:${VISUAL:public }}function $2($3)
+{
+    $3
+}
+endsnippet
+
+snippet rg
+Route::get('$1','$2');
+endsnippet
+
+snippet rv
+Route::view('$1','$2');
+endsnippet
+
+snippet rp
+Route::post('$1','$2');
+endsnippet
+
+
+snippet fk
+$table->integer('$1')->unsigned()->index();
+$table->foreign('$1')->references('id')->on('$2')->onDelete('cascade');
+endsnippet
+
+snippet rgroup
+Route::group(['middleware' => ['$1']],function(){
+    $2
+});
+endsnippet
+
+snippet rvalidate
+$request->validate([
+    '$1' => '$2',$3
+]);
+endsnippet
+
+snippet ret
+return $1;
+endsnippet
+
+snippet stable
+$table->$1('$2')$3;
+endsnippet
+
+snippet phpprint
+<?php print $1; ?>
+endsnippet
+
+snippet phpif
+<?php if($1): ?>
+	$2
+<?php endif; ?>
+endsnippet
+
+snippet phpforeach
+<?php foreach($1 as $2) ?>
+	$3
+<?php endforeach; ?>
+endsnippet
+
+
+

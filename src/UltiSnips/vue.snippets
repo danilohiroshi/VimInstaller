@@ -1,0 +1,119 @@
+
+snippet met
+$1: function($2){
+    $3
+}
+endsnippet
+
+snippet props
+props: ['$1'],
+endsnippet
+
+
+snippet forminput
+<div class="$1">
+    <div class="form-group">
+	    <label class="control-label">$2</label>
+
+	    <input type="$3" 
+	    name="$4" 
+	    class="form-control" 
+	    id="$5" 
+	    placeholder="$6" 
+	    v-model="$7"
+	    >
+    </div>
+</div>
+endsnippet
+
+
+snippet formtextarea
+<div class="$1">
+    <div class="form-group">
+	    <label class="control-label">$2</label>
+
+	    <textarea 
+	    name="$3" 
+	    class="form-control" 
+	    id="$4" 
+	    v-model="$5"
+	    >
+	    </textarea>
+    </div>
+</div>
+endsnippet
+
+snippet formselect
+<div class="$1">
+    <div class="form-group">
+	    <label class="control-label">$2</label>
+
+	    <select class="form-control" v-model="$3">
+		<option v-for="$4 in $5" :key="$6" v-bind:value="$7">{{$8}}</option>
+	    </select>
+    </div>
+</div>
+endsnippet
+
+snippet vfor
+v-for="$1 in $2" :key="$3"
+endsnippet
+
+snippet vtable
+ <div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+        <th style="width: 5%">#ID</th>
+        <th>$1</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr v-for="$2 in $3" :key="$4">
+	    <td>{{$5}}</td>
+	    <td>{{$6}}</td>
+	</tr>
+    </tbody>
+  </table>
+</div>
+endsnippet
+
+snippet vpanel
+<div class="panel panel-default">
+    <div class="panel-heading">$1</div>
+
+    <div class="panel-body">
+	$2
+    </div>
+</div>
+endsnippet
+
+snippet axiospost
+axios.post('$1').then(response => {
+    $3
+    toastr.success('$2');
+}).catch(error => {
+    console.log(error);
+    _.forIn(error.response.data.errors, function(value,key) {
+	toastr.error(value);
+    });
+});
+endsnippet
+
+snippet axiosget
+axios.get('$1').then(response => {
+    $3
+    toastr.success('$2');
+}).catch(error => {
+    console.log(error);
+    _.forIn(error.response.data.errors, function(value,key) {
+	toastr.error(value);
+    });
+});
+endsnippet
+
+snippet div
+<div class="$1">
+    $2
+</div>
+endsnippet
