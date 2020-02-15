@@ -1,0 +1,7 @@
+/tmp/
+/vendor/
+/sites/*/files
+/sites/*/private
+i/sites/*/settings*.php
+*.min.js
+*.min.css

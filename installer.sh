@@ -26,7 +26,9 @@ if ! [ -x "$(command -v ctags)" ]; then
 fi
 
 echo 'Install vimrc'
-cp vimrc ~/.vimrc
+cp src/vimrc ~/.vimrc
+cp src/agignore ~/.agignore
+cp src/ctags ~/.ctags
 mkdir -p ~/.vim
 cp src/plugins.vim ~/.vim
 cp -r src/after ~/.vim
