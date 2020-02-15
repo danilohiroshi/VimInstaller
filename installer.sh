@@ -39,6 +39,12 @@ if ! [ -x "$(command -v ctags)" ]; then
   sudo apt install exuberant-ctags
 fi
 
+if ! [ -x "$(command -v php)" ]; then
+  echo -e '\e[41m>> Error: php not installed.\e[49m' >&2
+  echo 'Installing drush...'
+  sudo apt install php
+fi
+
 if ! [ -x "$(command -v drush)" ]; then
   echo -e '\e[41m>> Error: drush not installed.\e[49m' >&2
   echo 'Installing drush...'
