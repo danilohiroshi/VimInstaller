@@ -1,4 +1,6 @@
 # VimInstaller
 My Vim Installer
-
-DO bash installer.sh
+ 
+``` 
+$ bash installer.sh
+```
