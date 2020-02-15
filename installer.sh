@@ -24,6 +24,7 @@ if ! [ -x "$(command -v composer)" ]; then
   echo -e '\e[41m>> Error: composer not installed.\e[49m' >&2
   echo 'Installing composer...'
   sudo apt install composer
+  echo 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"' >> ~/.bashrc
 fi
 
 if ! [ -x "$(command -v ag)" ]; then
@@ -36,6 +37,20 @@ if ! [ -x "$(command -v ctags)" ]; then
   echo -e '\e[41m>> Error: ctags not installed.\e[49m' >&2
   echo 'Installing ctags...'
   sudo apt install exuberant-ctags
+fi
+
+if ! [ -x "$(command -v drush)" ]; then
+  echo -e '\e[41m>> Error: drush not installed.\e[49m' >&2
+  echo 'Installing drush...'
+  composer global require drush/drush:8
+fi
+
+if ! [ -x "$(command -v phpcs)" ]; then
+  echo -e '\e[41m>> Error: phpcs not installed.\e[49m' >&2
+  echo 'Installing phpcs...'
+  composer global require squizlabs/php_codesniffer:2.9.1
+  composer global require drupal/coder:^8.2.12
+  PHP CodeSniffer Config installed_paths set to ~/.config/composer/vendor/drupal/coder/coder_sniffer
 fi
 
 echo 'Install vimrc'
