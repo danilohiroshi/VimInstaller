@@ -10,6 +10,11 @@ if ! [ -x "$(command -v vim)" ]; then
   exit 1
 fi
 
+if ! [ -x "$(command -v gvim)" ]; then
+  echo -e '\e[41m>> Error: gvim 8 not installed.\e[49m' >&2
+  exit 1
+fi
+
 if ! [ -x "$(command -v composer)" ]; then
   echo -e '\e[41m>> Error: composer not installed.\e[49m' >&2
   exit 1
