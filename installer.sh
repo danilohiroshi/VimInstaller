@@ -65,7 +65,7 @@ if ! [ -x "$(command -v phpcs)" ]; then
 fi
 
 echo 'Install font'
-mv src/font/*.ttf ~/.local/share/fonts
+cp src/font/*.ttf ~/.local/share/fonts
 
 echo 'Install vimrc'
 cp src/vimrc ~/.vimrc
