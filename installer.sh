@@ -61,19 +61,13 @@ if ! [ -x "$(command -v phpcs)" ]; then
   composer global require drupal/coder:^8.2.12
   composer global require dealerdirect/phpcodesniffer-composer-installer
   export PATH="$PATH:$HOME/.config/composer/vendor/bin"
-  phpcs --config-set installed_paths ~/.config/composer/vendor/drupal/coder/coder_sniffer   
+  phpcs --config-set installed_paths ~/.config/composer/vendor/drupal/coder/coder_sniffer
 fi
 
 if ! [ -x "$(command -v cmake)" ]; then
   echo -e '\e[41m>> Error: cmake not installed.\e[49m' >&2
   echo 'Installing phpcs...'
   sudo apt install cmake
-fi
-
-if ! [ -x "$(command -v python)" ]; then
-  echo -e '\e[41m>> Error: python not installed.\e[49m' >&2
-  echo 'Installing python...'
-  sudo apt install python
 fi
 
 echo 'Install font'
@@ -96,5 +90,8 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
 fi
 echo 'Install Plugins'
 vim +PluginInstall +qall
+
+sudo apt install build-essential cmake python3-dev
+python3 ~/.vim/bundle/youcompleteme/install.py --clang-completer
 
 echo 'Installation Success'
