@@ -70,6 +70,12 @@ if ! [ -x "$(command -v cmake)" ]; then
   sudo apt install cmake
 fi
 
+if ! [ -x "$(command -v python)" ]; then
+  echo -e '\e[41m>> Error: python not installed.\e[49m' >&2
+  echo 'Installing python...'
+  sudo apt install python
+fi
+
 echo 'Install font'
 cp src/font/*.ttf ~/.local/share/fonts
 
