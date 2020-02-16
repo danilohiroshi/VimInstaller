@@ -71,6 +71,7 @@ if ! [ -x "$(command -v cmake)" ]; then
 fi
 
 echo 'Install font'
+mkdir ~/.local/share/fonts
 cp src/font/*.ttf ~/.local/share/fonts
 
 echo 'Install vimrc'
