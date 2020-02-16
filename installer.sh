@@ -64,6 +64,9 @@ if ! [ -x "$(command -v phpcs)" ]; then
   phpcs --config-set installed_paths ~/.config/composer/vendor/drupal/coder/coder_sniffer   
 fi
 
+echo 'Install font'
+mv src/font/*.ttf ~/.local/share/fonts
+
 echo 'Install vimrc'
 cp src/vimrc ~/.vimrc
 cp src/agignore ~/.agignore
