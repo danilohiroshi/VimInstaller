@@ -64,6 +64,12 @@ if ! [ -x "$(command -v phpcs)" ]; then
   phpcs --config-set installed_paths ~/.config/composer/vendor/drupal/coder/coder_sniffer   
 fi
 
+if ! [ -x "$(command -v cmake)" ]; then
+  echo -e '\e[41m>> Error: cmake not installed.\e[49m' >&2
+  echo 'Installing phpcs...'
+  sudo apt install cmake
+fi
+
 echo 'Install font'
 cp src/font/*.ttf ~/.local/share/fonts
 
