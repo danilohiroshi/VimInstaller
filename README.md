@@ -13,6 +13,8 @@ $ bash installer.sh
 
 ## What will be installed
 
+This will install/update if needed only.
+
 - Git
 - Vim
 - GVim
