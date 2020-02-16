@@ -24,6 +24,8 @@ if ! [ -x "$(command -v php)" ]; then
   echo -e '\e[41m>> Error: php not installed.\e[49m' >&2
   echo 'Installing drush...'
   sudo apt install php
+  sudo apt install php-mbstring
+  sudo apt install php-xmlwriter
 fi
 
 if ! [ -x "$(command -v composer)" ]; then
