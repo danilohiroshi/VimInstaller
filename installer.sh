@@ -33,6 +33,7 @@ if ! [ -x "$(command -v composer)" ]; then
   echo 'Installing composer...'
   sudo apt install composer
   echo 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"' >> ~/.bashrc
+  source ~/.bashrc
 fi
 
 if ! [ -x "$(command -v ag)" ]; then
@@ -58,7 +59,9 @@ if ! [ -x "$(command -v phpcs)" ]; then
   echo 'Installing phpcs...'
   composer global require squizlabs/php_codesniffer:2.9.1
   composer global require drupal/coder:^8.2.12
-  PHP CodeSniffer Config installed_paths set to ~/.config/composer/vendor/drupal/coder/coder_sniffer
+  composer global require dealerdirect/phpcodesniffer-composer-installer
+  export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+  phpcs --config-set installed_paths ~/.config/composer/vendor/drupal/coder/coder_sniffer   
 fi
 
 echo 'Install vimrc'
