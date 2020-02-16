@@ -15,7 +15,7 @@ if ! [ -x "$(command -v vim)" ]; then
 fi
 
 if ! [ -x "$(command -v gvim)" ]; then
-  echo -e '\e[41m>> Error: gvim 8 not installed.\e[49m' >&2
+  echo -e '\e[41m>> Error: gvim not installed.\e[49m' >&2
   echo 'Installing gvim...'
   sudo apt-get install vim-gnome
 fi
@@ -66,7 +66,7 @@ fi
 
 if ! [ -x "$(command -v cmake)" ]; then
   echo -e '\e[41m>> Error: cmake not installed.\e[49m' >&2
-  echo 'Installing phpcs...'
+  echo 'Installing cmake...'
   sudo apt install cmake
 fi
 
