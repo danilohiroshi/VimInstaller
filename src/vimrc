@@ -216,14 +216,9 @@ function! OSearch(action)
   endif
 endfunction
 
-nmap     <C-F>f <Plug>CtrlSFPrompt
-vmap     <C-F>f <Plug>CtrlSFVwordPath
-vmap     <C-F>F <Plug>CtrlSFVwordExec
-nmap     <C-F>n <Plug>CtrlSFCwordPath
-nmap     <C-F>p <Plug>CtrlSFPwordPath
-nnoremap <C-F>o :CtrlSFOpen<CR>
-nnoremap <C-F>t :CtrlSFToggle<CR>
-inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+" Globla search
+nmap <Leader>f :CtrlSF 
+vmap <Leader>f :CtrlSF 
 
 "*****************************************************************************************"
 " >>> Split Management
@@ -276,13 +271,6 @@ let g:syntastic_php_phpcs_args = '--standard=Drupal,DrupalPractice'
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
 " let g:deoplete#ignore_sources.php = ['omni']
-
-"/
-"/ Ag
-"/
-imap <Leader>f <ESC>:Ag 
-nmap <Leader>f :Ag 
-vmap <Leader>f <ESC>:Ag 
 
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
@@ -432,11 +420,6 @@ nmap <Leader>z <ESC><S-a>;<ESC>
 
 "Select all document
 nmap <Leader>a gg<S-v><S-g>
-
-"ctrl f
-imap <c-f> <ESC>/
-nmap <c-f> /
-vmap <c-f> <ESC>/
 
 "Indent line
 vmap <tab> >gv
