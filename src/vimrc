@@ -217,9 +217,20 @@ function! OSearch(action)
 endfunction
 
 " Globla search
-nmap <c-f> :CtrlSF 
-vmap <c-f> :CtrlSF 
+nmap <c-f> :CtrlSF -R -I 
+vmap <c-f> :CtrlSF -R -I 
 nmap <c-b> <Esc>:CtrlSFToggle<CR>
+
+"/
+"/ Ack
+"/
+function! PhpImplementations()
+    exe 'CtrlSF -R -I "function ' . expand("<cword>") . '"'
+endfunction
+
+noremap <f12> :call PhpImplementations()<CR>
+" Automatically open & close quickfix window
+autocmd QuickFixCmdPost [^l]* nested cwindow
 
 "*****************************************************************************************"
 " >>> Split Management
@@ -277,17 +288,6 @@ if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
 vnoremap <Leader>ag y:Ag <C-R>"<cr>
-" Automatically open & close quickfix window
-autocmd QuickFixCmdPost [^l]* nested cwindow
-
-"/
-"/ Ack
-"/
-function! PhpImplementations(word)
-    exe 'Ack ^[^\n\r\*]*"function.*' . a:word . '.*($|{)"'
-endfunction
-
-noremap <f12> :call PhpImplementations('<cword>')<CR>
 " Automatically open & close quickfix window
 autocmd QuickFixCmdPost [^l]* nested cwindow
 
