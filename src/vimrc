@@ -229,7 +229,7 @@ let g:ctrlsf_winsize = '30%'
 
 
 function! PhpImplementations()
-    exe 'CtrlSF -R -I "function ' . expand("<cword>") . '"'
+    exe 'CtrlSF -R -I "(function ' . expand("<cword>") . '|' . expand("<cword>"). '.*function)"'
 endfunction
 
 noremap <f12> :call PhpImplementations()<CR>
