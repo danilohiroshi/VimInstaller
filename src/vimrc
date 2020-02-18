@@ -217,8 +217,8 @@ function! OSearch(action)
 endfunction
 
 " Globla search
-nmap <Leader>f :CtrlSF 
-vmap <Leader>f :CtrlSF 
+nmap <c-f> :CtrlSF 
+vmap <c-f> :CtrlSF 
 nmap <c-b> <Esc>:CtrlSFToggle<CR>
 
 "*****************************************************************************************"
