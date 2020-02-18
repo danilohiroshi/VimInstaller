@@ -219,6 +219,7 @@ endfunction
 " Globla search
 nmap <Leader>f :CtrlSF 
 vmap <Leader>f :CtrlSF 
+nmap <c-b> <Esc>:CtrlSFToggle<CR>
 
 "*****************************************************************************************"
 " >>> Split Management
@@ -309,7 +310,6 @@ nmap <c-e> :CtrlPMRUFiles<cr>
 "/ NERDTree
 "/
 let NERDTreeHijackNetrw = 0
-nmap <c-b> :NERDTreeToggle<cr>
 
 "/
 "/ Emmet
