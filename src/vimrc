@@ -221,9 +221,12 @@ nmap <c-f> :CtrlSF -R -I
 vmap <c-f> :CtrlSF -R -I 
 nmap <c-b> <Esc>:CtrlSFToggle<CR>
 
-"/
-"/ Ack
-"/
+let g:ctrlsf_auto_focus = {
+    \ "at": "done",
+    \ "duration_less_than": 1000
+    \ }
+let g:ctrlsf_winsize = '30%'
+
 function! PhpImplementations()
     exe 'CtrlSF -R -I "function ' . expand("<cword>") . '"'
 endfunction
