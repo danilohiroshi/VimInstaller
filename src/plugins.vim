@@ -48,5 +48,6 @@ Plugin 'justinmk/vim-sneak'
 Plugin 'mileszs/ack.vim'
 Plugin 'valloric/youcompleteme'
 Plugin 'elzr/vim-json'
+Plugin 'dyng/ctrlsf.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
