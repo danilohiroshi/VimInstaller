@@ -29,4 +29,6 @@ This will install/update if needed only.
 - Jetbrains Font
 - Vundle
 - Python3
+- node
+- sass-lint
  

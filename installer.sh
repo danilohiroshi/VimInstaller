@@ -70,6 +70,29 @@ if ! [ -x "$(command -v cmake)" ]; then
   sudo apt install cmake
 fi
 
+if ! [ -x "$(command -v nvm)" ]; then
+  echo -e '\e[41m>> Error: nvm not installed.\e[49m' >&2
+  echo 'Installing nvm...'
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+  export NVM_DIR="${HOME}/.nvm"
+  source .bashrc
+fi
+
+if ! [ -x "$(command -v node)" ]; then
+  echo -e '\e[41m>> Error: node not installed.\e[49m' >&2
+  echo 'Installing node...'
+  nvm install v6.11.5
+  nvm alias default node
+  source .bashrc
+fi
+
+if ! [ -x "$(command -v sass-lint)" ]; then
+  echo -e '\e[41m>> Error: sass-lint not installed.\e[49m' >&2
+  echo 'Installing sass-lint...'
+  npm install -g sass-lint
+  source .bashrc
+fi
+
 echo 'Install font'
 mkdir -p ~/.local/share/fonts
 cp src/font/*.ttf ~/.local/share/fonts
@@ -95,4 +118,5 @@ vim +PluginInstall +qall
 sudo apt install build-essential cmake python3-dev
 python3 ~/.vim/bundle/youcompleteme/install.py --clang-completer
 
+source ~/.vimrc
 echo 'Installation Success'
