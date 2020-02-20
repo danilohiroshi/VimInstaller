@@ -322,7 +322,7 @@ let g:user_emmet_mode='inv'  "enable all functions, which is equal to
 let g:user_emmet_mode='a'    "enable all function in all mode.
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,vue,blade,htm,php EmmetInstall
-imap <Leader><Leader> <esc><c-y>,
+imap <tab><tab> <esc><c-y>,
 
 
 "/
