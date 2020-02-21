@@ -75,7 +75,7 @@ if ! [ -x "$(command -v nvm)" ]; then
   echo 'Installing nvm...'
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
   export NVM_DIR="${HOME}/.nvm"
-  source .bashrc
+  source ~/.bashrc
 fi
 
 if ! [ -x "$(command -v node)" ]; then
@@ -83,14 +83,14 @@ if ! [ -x "$(command -v node)" ]; then
   echo 'Installing node...'
   nvm install v6.11.5
   nvm alias default node
-  source .bashrc
+  source ~/.bashrc
 fi
 
 if ! [ -x "$(command -v sass-lint)" ]; then
   echo -e '\e[41m>> Error: sass-lint not installed.\e[49m' >&2
   echo 'Installing sass-lint...'
   npm install -g sass-lint
-  source .bashrc
+  source ~/.bashrc
 fi
 
 echo 'Install font'
