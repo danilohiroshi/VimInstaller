@@ -119,4 +119,8 @@ sudo apt install build-essential cmake python3-dev
 python3 ~/.vim/bundle/youcompleteme/install.py --clang-completer
 
 source ~/.vimrc
+
+# Install deoplete
+(cd ~/.vim/bundle/deoplete-padawan && composer install)
+
 echo 'Installation Success'

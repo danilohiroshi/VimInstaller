@@ -48,5 +48,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'valloric/youcompleteme'
 Plugin 'elzr/vim-json'
 Plugin 'dyng/ctrlsf.vim'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'padawan-php/deoplete-padawan'
 call vundle#end()            " required
 filetype plugin indent on    " required
