@@ -50,8 +50,7 @@ set noswapfile
 set backspace=indent,eol,start
 
 " Enable code folding by syntax and disable folding by default
-setlocal foldmethod=syntax
-setlocal nofoldenable
+setlocal foldmethod=manual
 
 "Persistent undo
 set undofile
@@ -280,6 +279,8 @@ nmap <c-u> :UndotreeToggle<cr><c-h>
 "/
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 let g:syntastic_php_phpcs_args = '--standard=Drupal,DrupalPractice'
+"let g:syntastic_scss_checkers=["sass_lint"]
+"let g:syntastic_php_phpcs_args = '--config /home/dhiroshi/Code/jnjvisionpro/docroot/sites/all/themes/custom/jnj_commerce_theme/gulp/.sass-lint.yml'
 
 "/
 "/ Deoplete
@@ -438,6 +439,10 @@ nmap <c-w> :q!<cr>
 "*****************************************************************************************"
 
 set foldmethod=manual
+set re=1
+set ttyfast
+set regexpengine=0
+set lazyredraw
 
 "*****************************************************************************************"
 " >>> Auto-commands
