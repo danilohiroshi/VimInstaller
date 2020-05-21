@@ -50,5 +50,6 @@ Plugin 'elzr/vim-json'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'padawan-php/deoplete-padawan'
+Plugin 'jshint/jshint'
 call vundle#end()            " required
 filetype plugin indent on    " required
