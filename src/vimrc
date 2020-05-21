@@ -221,7 +221,7 @@ vmap <c-f> y:CtrlSF -R -I <C-R>"<cr>
 nmap <c-b> <Esc>:CtrlSFToggle<CR>
 
 let g:ctrlsf_auto_focus = {
-    \ "at": "done",
+    \ "at": "start",
     \ "duration_less_than": 1000
     \ }
 let g:ctrlsf_winsize = '30%'
