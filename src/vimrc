@@ -89,12 +89,8 @@ endfunction
 " >>> Debugger
 "*****************************************************************************************"
 
-packadd! vimspector
-let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
-nmap <S-F10> <Plug>VimspectorToggleBreakpoint
-nmap <F8> <Plug>VimspectorStepOver
-nmap <F7> <Plug>VimspectorStepInto
-nmap <S-F7> <Plug>VimspectorStepOut
+"packadd! vimspector
+"let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 
 let g:vdebug_options = {
 \ 'break_on_open': 0,
@@ -106,7 +102,7 @@ let g:vdebug_options = {
 let g:vdebug_keymap = {
   \    "run" : "<F5>",
   \    "step_over" : "<F8>",
-  \    "step_into" : "<S-F8>",
+  \    "step_into" : "<F7>",
   \    "step_out" : "<S-F7>",
   \    "close" : "<S-F5>",
   \    "set_breakpoint" : "<S-F10>",
@@ -140,6 +136,10 @@ nmap <Leader>jp :!drush -l jp cc all<cr>
 "*****************************************************************************************"
 " >>> Visuals
 "*****************************************************************************************"
+augroup illuminate_augroup
+    autocmd!
+    autocmd VimEnter * hi illuminatedWord cterm=underline gui=underline
+augroup END
 " Cursor visual
 "let &t_SI = "\<esc>[5 q"  " blinking I-beam in insert mode
 "let &t_SR = "\<esc>[3 q"  " blinking underline in replace mode
