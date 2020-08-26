@@ -89,6 +89,13 @@ endfunction
 " >>> Debugger
 "*****************************************************************************************"
 
+packadd! vimspector
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+nmap <S-F10> <Plug>VimspectorToggleBreakpoint
+nmap <F8> <Plug>VimspectorStepOver
+nmap <F7> <Plug>VimspectorStepInto
+nmap <S-F7> <Plug>VimspectorStepOut
+
 let g:vdebug_options = {
 \ 'break_on_open': 0,
 \ 'path_maps': {'/var/www/html/docroot': '/home/dhiroshi/Code/jnjvisionpro/docroot'},
@@ -124,7 +131,7 @@ if has("autocmd")
   augroup END
 endif
 " Drupal commands
-nmap <Leader>cs :Shell phpcs --standard=Drupal,DrupalPractice --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md' %<cr><cr>
+nmap <Leader>cs :Shell phpcs --standard=Drupal,DrupalPractice --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md,js' %<cr><cr>
 nmap <Leader>csf :Shell phpcbf --standard=Drupal,DrupalPractice --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md' %<cr><cr>
 nmap <Leader>us :!drush -l us cc all<cr>
 nmap <Leader>ca :!drush -l ca cc all<cr>
@@ -133,6 +140,10 @@ nmap <Leader>jp :!drush -l jp cc all<cr>
 "*****************************************************************************************"
 " >>> Visuals
 "*****************************************************************************************"
+" Cursor visual
+"let &t_SI = "\<esc>[5 q"  " blinking I-beam in insert mode
+"let &t_SR = "\<esc>[3 q"  " blinking underline in replace mode
+"let &t_EI = "\<esc>[ q"  " default cursor (usually blinking block) otherwise
 
 " Enable syntax
 syntax enable
@@ -280,10 +291,10 @@ nmap <c-u> :UndotreeToggle<cr><c-h>
 "/
 "/ Syntastic
 "/
-let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
-let g:syntastic_php_phpcs_args = '--standard=Drupal,DrupalPractice'
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd', 'phplint']
+let g:syntastic_php_phpcs_args = '--standard=Drupal,DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,js'
 "let g:syntastic_scss_checkers=["sass_lint"]
-"let g:syntastic_php_phpcs_args = '--config /home/dhiroshi/Code/jnjvisionpro/docroot/sites/all/themes/custom/jnj_commerce_theme/gulp/.sass-lint.yml'
+let g:syntastic_js_checkers=["jshint"]
 
 "/
 "/ Deoplete
