@@ -89,9 +89,6 @@ endfunction
 " >>> Debugger
 "*****************************************************************************************"
 
-"packadd! vimspector
-"let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
-
 let g:vdebug_options = {
 \ 'break_on_open': 0,
 \ 'path_maps': {'/var/www/html/docroot': '/home/dhiroshi/Code/jnjvisionpro/docroot'},
@@ -109,7 +106,7 @@ let g:vdebug_keymap = {
   \    "eval_under_cursor" : "<S-F12>",
   \ }
 
-let g:vdebug_features = { 'max_children': 128 }
+let g:vdebug_features = { 'max_children': 200 }
 
 "*****************************************************************************************"
 " >>> Drupal Settings
@@ -136,15 +133,6 @@ nmap <Leader>jp :!drush -l jp cc all<cr>
 "*****************************************************************************************"
 " >>> Visuals
 "*****************************************************************************************"
-augroup illuminate_augroup
-    autocmd!
-    autocmd VimEnter * hi illuminatedWord cterm=underline gui=underline
-augroup END
-let g:Illuminate_delay = 100
-" Cursor visual
-"let &t_SI = "\<esc>[5 q"  " blinking I-beam in insert mode
-"let &t_SR = "\<esc>[3 q"  " blinking underline in replace mode
-"let &t_EI = "\<esc>[ q"  " default cursor (usually blinking block) otherwise
 
 " Enable syntax
 syntax enable
@@ -276,6 +264,15 @@ cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
 "*****************************************************************************************"
 " >>> Plugins
 "*****************************************************************************************"
+
+"/
+"/ Illuminate
+"/
+augroup illuminate_augroup
+    autocmd!
+    autocmd VimEnter * hi illuminatedWord cterm=underline gui=underline
+augroup END
+let g:Illuminate_delay = 100
 
 "/
 "/ Ctags
@@ -459,8 +456,9 @@ nmap <Leader>cf :r !echo %:p<cr><esc>V
 set foldmethod=manual
 set re=1
 set ttyfast
-set regexpengine=0
-set lazyredraw
+set regexpengine=1
+set nowrap
+set synmaxcol=0
 
 "*****************************************************************************************"
 " >>> Auto-commands
