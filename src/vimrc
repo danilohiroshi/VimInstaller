@@ -220,7 +220,7 @@ endfunction
 
 " Globla search
 nmap <c-f> :CtrlSF -R -I 
-vmap <c-f> y:CtrlSF -R -I <C-R>"<cr>
+vmap <c-f> y:CtrlSF -R -I <C-R>"
 nmap <c-b> <Esc>:CtrlSFToggle<CR>
 
 let g:ctrlsf_auto_focus = {
