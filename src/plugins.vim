@@ -52,5 +52,6 @@ Plugin 'padawan-php/deoplete-padawan'
 Plugin 'jshint/jshint'
 Plugin 'rrethy/vim-illuminate'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'rhysd/clever-f.vim'
 call vundle#end()            " required
-filetype plugin indent on    " required
+ciletype plugin indent on    " required
