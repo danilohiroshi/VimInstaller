@@ -54,4 +54,4 @@ Plugin 'rrethy/vim-illuminate'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'rhysd/clever-f.vim'
 call vundle#end()            " required
-ciletype plugin indent on    " required
+filetype plugin indent on    " required
