@@ -136,6 +136,7 @@ nmap <Leader>jp :!drush -l jp cc all<cr>
 " Font
 set guifont=JetBrains\ Mono\ 8
 set linespace=15
+hi CursorLine guibg=#0F2130 ctermbg=NONE cterm=underline
 
 " Terminal colors
 set t_CO=256
@@ -283,10 +284,6 @@ let g:indent_guides_start_level = 2
 "/
 "/ Illuminate
 "/
-augroup illuminate_augroup
-    autocmd!
-    autocmd VimEnter * hi illuminatedWord cterm=underline gui=underline
-augroup END
 let g:Illuminate_delay = 100
 
 "/
