@@ -237,7 +237,8 @@ let g:ctrlsf_auto_focus = {
     \ "duration_less_than": 1000
     \ }
 let g:ctrlsf_winsize = '30%'
-
+let g:ctrlsf_default_view_mode = 'compact'
+let g:ctrlsf_position = 'bottom'
 
 function! PhpImplementations()
     exe 'CtrlSF -R -I "function ' . expand("<cword>") . '"'
