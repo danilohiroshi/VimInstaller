@@ -133,6 +133,12 @@ nmap <Leader>jp :!drush -l jp cc all<cr>
 "*****************************************************************************************"
 " >>> Visuals
 "*****************************************************************************************"
+" Font
+set guifont=JetBrains\ Mono\ 8
+set linespace=15
+
+" Terminal colors
+set t_CO=256
 
 " Enable syntax
 syntax enable
@@ -145,15 +151,18 @@ set relativenumber
 set guioptions-=l
 set guioptions-=L
 
-" Remove menu bar
+" Remove Bars
 set guioptions-=m
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
 
 " Remove toolbar
 set guioptions-=T
 
 " Set line numbers
 set number
-set guifont=JetBrains\ Mono\ 8
 
 " Disable quote concealing in JSON files
 let g:vim_json_syntax_conceal = 0
