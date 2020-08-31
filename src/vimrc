@@ -299,13 +299,6 @@ let g:Illuminate_highlightUnderCursor = 0
 let g:Illuminate_delay = 100
 
 "/
-"/ Ctags
-"/
-nmap <Leader>t :!ctags --file-scope=no -Rf .vscode/tags --tag-relative=yes --langmap=php:.engine.inc.module.theme.install.php --php-kinds=cdfi --recurse --fields=+l --exclude=node_modules --exclude=public --exclude='*.js' --exclude=sites/all/themes/custom/jnj_commerce_theme/gulp --exclude=.git --exclude=sites/ca/files --exclude=sites/jp/files --exclude=sites/us/files --exclude=node_modules
-set tags=.vscode/tags
-let g:autotagTagsFile=".vscode/tags"
-
-"/
 "/ Undo tree
 "/
 nmap <c-u> :UndotreeToggle<cr><c-h>
@@ -323,12 +316,8 @@ let g:syntastic_warning_symbol = '∆'
 let g:syntastic_style_warning_symbol = '∆'
 
 "/
-"/ Deoplete
+"/ Ag
 "/
-let g:deoplete#enable_at_startup = 1
-" let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
-" let g:deoplete#ignore_sources.php = ['omni']
-
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
