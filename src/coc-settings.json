@@ -1,0 +1,12 @@
+{
+  "intelephense.licenceKey": "",
+  "intelephense.files.associations": [
+    "*.php",
+    "*.phtml",
+    "*.inc",
+    "*.module",
+    "*.install",
+    "*.theme",
+    "*.test"
+  ]
+}

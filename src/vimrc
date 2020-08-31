@@ -5,6 +5,7 @@ set nocompatible              " be iMproved, required
 "*****************************************************************************************"
 
 so ~/.vim/plugins.vim
+so ~/.vim/coc.vim
 
 
 "*****************************************************************************************"
@@ -245,7 +246,7 @@ function! PhpImplementations()
     exe 'CtrlSF -R -I "function ' . expand("<cword>") . '"'
 endfunction
 
-noremap <f12> :call PhpImplementations()<CR>
+"noremap <f12> :call PhpImplementations()<CR>
 " Automatically open & close quickfix window
 autocmd QuickFixCmdPost [^l]* nested cwindow
 
@@ -275,6 +276,11 @@ cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
 "*****************************************************************************************"
 " >>> Plugins
 "*****************************************************************************************"
+
+"/
+"/ COC
+"/
+let g:coc_node_path = '~/.nvm/versions/node/v10.22.0/bin/node'
 
 "/
 "/ Indent Guides
