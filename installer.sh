@@ -9,15 +9,9 @@ fi
 if ! [ -x "$(command -v vim)" ]; then
   echo -e '\e[41m>> Error: vim 8 not installed.\e[49m' >&2
   echo 'Installing vim...'
-  sudo add-apt-repository ppa:jonathonf/vim
-  sudo apt update
-  sudo apt install vim
-fi
-
-if ! [ -x "$(command -v gvim)" ]; then
-  echo -e '\e[41m>> Error: gvim not installed.\e[49m' >&2
-  echo 'Installing gvim...'
-  sudo apt-get install vim-gnome
+  sudo apt install libgtk-3-dev
+  git clone https://github.com/vim/vim.git
+  (cd vim && ./configure --enable-python3interp=yes --with-python3-config-dir=/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu --enable-gui=gtk3 && make && sudo make install)
 fi
 
 if ! [ -x "$(command -v php)" ]; then
@@ -82,8 +76,15 @@ if ! [ -x "$(command -v node)" ]; then
   echo -e '\e[41m>> Error: node not installed.\e[49m' >&2
   echo 'Installing node...'
   nvm install v6.11.5
+  nvm install 10
   nvm alias default node
   source ~/.bashrc
+fi
+
+if ! [ -x "$(command -v yarn)" ]; then
+  echo -e '\e[41m>> Error: yarn not installed.\e[49m' >&2
+  echo 'Installing yarn...'
+  npm install -g yarn
 fi
 
 if ! [ -x "$(command -v sass-lint)" ]; then
@@ -107,6 +108,8 @@ cp -r src/after ~/.vim
 mkdir -p ~/.vim/bundle
 cp -r src/UltiSnips ~/.vim
 mkdir -p ~/.vim/undodir
+cp -r src/coc.vim ~/.vim
+cp -r src/coc-settings.json ~/.vim
 
 echo 'Install Vundle'
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
@@ -115,12 +118,8 @@ fi
 echo 'Install Plugins'
 vim +PluginInstall +qall
 
-sudo apt install build-essential cmake python3-dev
-python3 ~/.vim/bundle/youcompleteme/install.py --clang-completer
-
 source ~/.vimrc
 
-# Install deoplete
-(cd ~/.vim/bundle/deoplete-padawan && composer install)
-
 echo 'Installation Success'
+
+echo 'TODO: Install COC.nvim'

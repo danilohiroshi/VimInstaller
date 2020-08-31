@@ -47,12 +47,7 @@ Plugin 'elzr/vim-json'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'jshint/jshint'
 Plugin 'rrethy/vim-illuminate'
-"Plugin 'airblade/vim-gitgutter'
 Plugin 'rhysd/clever-f.vim'
 Plugin 'neoclide/coc.nvim'
-"Plugin 'ervandew/supertab'
-"Plugin 'Shougo/deoplete.nvim'
-"Plugin 'padawan-php/deoplete-padawan'
-"Plugin 'valloric/youcompleteme'
 call vundle#end()            " required
 filetype plugin indent on    " required

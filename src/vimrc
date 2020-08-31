@@ -137,8 +137,8 @@ nmap <Leader>jp :!drush -l jp cc all<cr>
 " >>> Visuals
 "*****************************************************************************************"
 " Font
-set guifont=JetBrains\ Mono\ 9
-set linespace=5
+set guifont=JetBrains\ Mono\ 8
+"set linespace=5
 
 " Terminal colors
 set t_CO=256
