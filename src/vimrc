@@ -62,6 +62,9 @@ set undodir=~/.vim/undodir
 set undolevels=1000         " How many undos
 set undoreload=100        " number of lines to save for undo
 
+" Automatically refresh modified files
+set autoread
+
 "*****************************************************************************************"
 " >>> Run shell command and display in a new buffer
 "*****************************************************************************************"
