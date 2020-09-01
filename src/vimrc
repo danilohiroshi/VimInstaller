@@ -303,6 +303,7 @@ let g:startify_change_to_dir = 1
 "/ COC
 "/
 let g:coc_node_path = '~/.nvm/versions/node/v10.22.0/bin/node'
+nmap <c-r> <space>o
 
 "/
 "/ Indent Guides
@@ -348,7 +349,6 @@ autocmd FileType vue set iskeyword-=.
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor\|storage\|public/storage'
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-nmap <c-r> :CtrlPBufTag<cr>
 nmap <c-e> :CtrlPMRUFiles<cr>
 
 "/
