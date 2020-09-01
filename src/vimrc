@@ -289,17 +289,6 @@ cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
 nmap <Leader>g :Git difftool -y<cr>
 
 "/
-"/ Startify
-"/
-let g:startify_lists = [
-    \ { 'header': ['   Sessions'],       'type': 'sessions' },
-\ ]
-let g:startify_bookmarks = [ {'c': '~/.vimrc'}, {'z': '~/.zshrc' } ]
-let g:startify_session_persistence = 1
-let g:startify_session_delete_buffers = 1
-let g:startify_change_to_dir = 1
-
-"/
 "/ COC
 "/
 let g:coc_node_path = '~/.nvm/versions/node/v10.22.0/bin/node'
