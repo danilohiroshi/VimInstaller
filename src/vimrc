@@ -281,6 +281,11 @@ cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
 "*****************************************************************************************"
 
 "/
+"/ Git
+"/
+nmap <Leader>g :Git difftool -y<cr>
+
+"/
 "/ Startify
 "/
 let g:startify_lists = [
@@ -408,7 +413,7 @@ imap <c-Space> <c-n>
 
 
 "/
-"/ Bookmarks 
+"/ Bookmarks
 "/
 " let g:bookmark_save_per_working_dir = 1
 let g:bookmark_auto_save = 1
