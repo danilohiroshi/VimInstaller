@@ -112,7 +112,7 @@ let g:vdebug_keymap = {
 
 let g:vdebug_features = { 'max_children': 200 }
 
-vmap <S-F11> y:VdebugEval! <C-R>"
+vmap <S-F11> y:VdebugEval! <C-R>"<cr>
 nmap <S-F11> y:VdebugEval!<cr>
 
 "*****************************************************************************************"
