@@ -284,6 +284,10 @@ cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
 " >>> Plugins
 "*****************************************************************************************"
 
+"/
+"/ COC Explorer
+"/
+nmap - :CocCommand explorer<CR>
 
 "/
 "/ Airline
