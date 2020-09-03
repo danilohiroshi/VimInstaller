@@ -11,5 +11,5 @@
   ],
   "explorer.previewAction.onHover": false,
   "explorer.quitOnOpen": true,
-  "explorer.width": 100
+  "explorer.position": "tab"
 }
