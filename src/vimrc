@@ -426,6 +426,10 @@ let g:bookmark_auto_save = 1
 "*****************************************************************************************"
 " >>> Key Mapping
 "*****************************************************************************************"
+" buffers
+nmap <C-Tab> :bp<cr>
+nmap <C-S-Tab> :bn<cr>
+nmap <c-w> :bdelete<cr>
 
 " Press F7 to activate spell checking, F8 to turn it off.
 map <F7> <Esc>:setlocal spell spelllang=en_us<CR>
@@ -479,9 +483,6 @@ vmap <tab> >gv
 vmap <S-tab> <gv
 nmap <tab> V><ESC>
 nmap <S-tab> V<<ESC>
-
-"close window
-nmap <c-w> :q!<cr>
 
 " Insert file path
 nmap <Leader>cf :r !echo %:p<cr><esc>V
