@@ -8,5 +8,8 @@
     "*.install",
     "*.theme",
     "*.test"
-  ]
+  ],
+  "explorer.previewAction.onHover": false,
+  "explorer.quitOnOpen": true,
+  "explorer.width": 100
 }
