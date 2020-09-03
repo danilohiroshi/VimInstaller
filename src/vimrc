@@ -427,8 +427,7 @@ let g:bookmark_auto_save = 1
 " >>> Key Mapping
 "*****************************************************************************************"
 " buffers
-nmap <C-Tab> :bp<cr>
-nmap <C-S-Tab> :bn<cr>
+nmap <C-Tab> :bn<cr>
 nmap <c-w> :bdelete<cr>
 
 " Press F7 to activate spell checking, F8 to turn it off.
