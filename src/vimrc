@@ -432,6 +432,7 @@ let g:bookmark_auto_save = 1
 "*****************************************************************************************"
 " buffers
 nmap <C-Tab> :bn<cr>
+nmap <C-S-Tab> :bp<cr>
 nmap <c-w> :bdelete<cr>
 
 " Press F7 to activate spell checking, F8 to turn it off.
@@ -480,12 +481,6 @@ nmap <Leader>z <ESC><S-a>;<ESC>
 
 "Select all document
 nmap <Leader>a gg<S-v><S-g>
-
-"Indent line
-vmap <tab> >gv
-vmap <S-tab> <gv
-nmap <tab> V><ESC>
-nmap <S-tab> V<<ESC>
 
 " Insert file path
 nmap <Leader>cf :r !echo %:p<cr><esc>V
