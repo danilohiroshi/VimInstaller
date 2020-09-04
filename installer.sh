@@ -97,6 +97,7 @@ fi
 echo 'Install font'
 mkdir -p ~/.local/share/fonts
 cp src/font/*.ttf ~/.local/share/fonts
+(cd fonts && ./install.sh)
 
 echo 'Install vimrc'
 cp src/vimrc ~/.vimrc
@@ -114,6 +115,8 @@ cp -r src/coc-settings.json ~/.vim
 echo 'Install Vundle'
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  # Powerline
+  sudo apt-get install fonts-powerline
 fi
 echo 'Install Plugins'
 vim +PluginInstall +qall
