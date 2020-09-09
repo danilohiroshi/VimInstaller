@@ -239,14 +239,14 @@ endfunction
 " Globla search
 nmap <c-f> :CtrlSF -R -I 
 vmap <c-f> y:CtrlSF -R -I <C-R>"
-nmap <c-b> <Esc>:CtrlSFToggle<CR>
+nmap <c-S-f> <Esc>:CtrlSFToggle<CR>
 
 let g:ctrlsf_auto_focus = {
     \ "at": "start",
     \ "duration_less_than": 1000
     \ }
 let g:ctrlsf_winsize = '30%'
-let g:ctrlsf_position = 'bottom'
+let g:ctrlsf_position = 'left'
 
 function! PhpImplementations()
     exe 'CtrlSF -R -I "function ' . expand("<cword>") . '"'
@@ -403,8 +403,7 @@ nnoremap <Leader>d :call pdv#DocumentWithSnip()<CR>
 "/ Ultisnips
 "/
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
 
 
 "/
