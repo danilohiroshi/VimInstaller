@@ -240,6 +240,7 @@ endfunction
 nmap <c-f> :CtrlSF -R -I 
 vmap <c-f> y:CtrlSF -R -I <C-R>"
 nmap <c-S-f> <Esc>:CtrlSFToggle<CR>
+let g:ctrlsf_ignore_dir = ['bower_components', 'node_modules', 'files']
 
 let g:ctrlsf_auto_focus = {
     \ "at": "start",
