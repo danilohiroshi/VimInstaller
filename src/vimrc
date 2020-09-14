@@ -460,10 +460,10 @@ vmap <c-s> <ESC>:w<cr>v
 "Bring back ctrl-c and ctrl-v
 nmap <c-d> yyp<cr><S-i><esc>l
 imap <c-d> <ESC>yyp<cr>i
-vmap <C-c> "xy
-vmap <C-x> "xc
+vmap <C-c> "*y
+vmap <C-x> "*c
 imap <C-v> <ESC><C-v>
-nmap <C-v> "xp
+nmap <C-v> "*p
 
 "Bring back ctrl-z
 nmap <c-z> u
