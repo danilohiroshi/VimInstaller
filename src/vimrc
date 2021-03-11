@@ -5,7 +5,6 @@ set nocompatible              " be iMproved, required
 "*****************************************************************************************"
 
 so ~/.vim/plugins.vim
-so ~/.vim/coc.vim
 
 
 "*****************************************************************************************"
@@ -285,11 +284,6 @@ cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
 "*****************************************************************************************"
 
 "/
-"/ COC Explorer
-"/
-nmap - :CocCommand explorer<CR>
-
-"/
 "/ Airline
 "/
 let g:airline_powerline_fonts = 1
@@ -301,12 +295,6 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 "/ Git
 "/
 nmap <Leader>g :Git difftool -y<cr>
-
-"/
-"/ COC
-"/
-let g:coc_node_path = '~/.nvm/versions/node/v10.22.0/bin/node'
-nmap <c-r> <space>o
 
 "/
 "/ Indent Guides

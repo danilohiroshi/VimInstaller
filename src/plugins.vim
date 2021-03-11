@@ -47,7 +47,6 @@ Plugin 'dyng/ctrlsf.vim'
 Plugin 'jshint/jshint'
 Plugin 'rrethy/vim-illuminate'
 Plugin 'rhysd/clever-f.vim'
-Plugin 'neoclide/coc.nvim'
 Plugin 'terryma/vim-multiple-cursors'
 call vundle#end()            " required
 filetype plugin indent on    " required

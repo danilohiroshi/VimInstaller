@@ -109,8 +109,6 @@ cp -r src/after ~/.vim
 mkdir -p ~/.vim/bundle
 cp -r src/UltiSnips ~/.vim
 mkdir -p ~/.vim/undodir
-cp -r src/coc.vim ~/.vim
-cp -r src/coc-settings.json ~/.vim
 
 echo 'Install Vundle'
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
@@ -124,5 +122,3 @@ vim +PluginInstall +qall
 source ~/.vimrc
 
 echo 'Installation Success'
-
-echo 'TODO: Install COC.nvim'
